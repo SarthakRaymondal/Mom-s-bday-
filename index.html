@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Bday Mother</title>
+    <link rel="icon" type="images/png" href="flower.png">
+    <style>
+        body {
+            margin: 0;
+            background: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .font1 {
+              font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+        }
+        .bg-blur {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            z-index: -3;
+            backdrop-filter: blur(0px);
+            transition: 1s;
+        }
+        #cd1 {
+            position: fixed;
+            bottom: -100px;
+            left:-160px;
+            transition: 1s;
+            z-index: -1;
+        }
+        #cd2 {
+            position: fixed;
+            bottom: -100px;
+            right:-160px;
+            transition: 1s;
+            transform:rotateY(180deg);
+            z-index: -2;
+        }
+        #cd3 {
+            position: fixed;
+            top: -100px;
+            left:-160px;
+            transition: 1s;
+            transform:rotateX(180deg);
+            z-index: -2;
+        }
+        #cd4 {
+            position: fixed;
+            top: -100px;
+            right: -160px;
+            transition: 1s;
+            transform:rotate(180deg);
+            z-index: -2;
+        }
+        #bf1 {
+            position: fixed;
+            z-index: 1;
+            bottom: -60px;
+            left: -60px;
+            transform: rotateZ(50deg);
+            animation-name: anim1;
+            animation-duration: 10s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        @keyframes anim1 {
+            0% {
+                bottom: -60px; /* Start slightly off-screen bottom */
+                left: -60px;  /* Start slightly off-screen left */
+                transform: translate(-50%, 50%) rotateZ(0deg); /* Center and no initial rotation */
+            }
+            5% {
+                bottom: 0px; /* Move to screen edge */
+                left: 0px;   /* Move to screen edge */
+                transform: translate(-50%, 50%) rotateZ(0deg);
+            }
+            20% {
+                bottom: 20%;
+                left: 20%;
+                transform: translate(-50%, 50%) rotateZ(-10deg); /* Rotate slightly left */
+            }
+            40% {
+                bottom: 40%;
+                left: 40%;
+                transform: translate(-50%, 50%) rotateZ(10deg); /* Rotate slightly right */
+            }
+            60% {
+                bottom: 60%;
+                left: 60%;
+                transform: translate(-50%, 50%) rotateZ(-10deg);
+            }
+            80% {
+                bottom: 80%;
+                left: 80%;
+                transform: translate(-50%, 50%) rotateZ(10deg);
+            }
+            100% {
+                bottom: 109%; /* End off-screen top */
+                left: 109%;  /* End off-screen right */
+                transform: translate(-50%, 50%) rotateZ(0deg);
+            }
+        }
+        .gift {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+        }
+        .gt {
+            transition: 0.5s;
+        }
+        .rg {
+            width: 100%;
+            display: none;
+            justify-content: center;
+            transition: 3s;
+            opacity: 0;
+            animation-name: anim2;
+            animation-duration: 0.5s;
+        }
+        .rgt {
+            transition: 3s;
+            opacity: 0;
+            display: none;
+            animation-name: anim2;
+            animation-duration: 0.5s;
+        }
+        .imgh {
+            transition: 0.5s;
+        }
+        .imgh:hover {
+            transform: rotateZ(30deg);
+        }
+        .display_div {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 4;
+            background-color: rgba(0, 0, 0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation-name: anim2;
+            animation-duration: 0.5s;
+        }
+        .bt1 {
+            transition: 0.5s;
+        }
+        .bt1:hover {
+            filter: brightness(80%);
+        }
+        .letter {
+            display: none;
+        }
+        .vc {
+            display: none;
+        }
+        .display_div {
+            display: none;
+        }
+        .giftimg {
+            transition: 0.5s;
+        }
+        .giftimg:hover {
+            height: 270px;
+        }
+        @keyframes anim2 {
+            0% {opacity: 0;}
+            100%{opacity: 1;}
+        }
+        @keyframes anim3 {
+            0% {opacity: 1;}
+            100%{opacity: 0;}
+        }
+        .vidcam1 {
+            width: 358px;
+            height: 450px;
+
+            background-image: url(vidc1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body onload="abb1()" id="body" class="font1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <p style="position: absolute;left: 50%;top:70px; transform: translate(-50%, -50%);font-size: 40px;font-weight: 900;color: white;z-index: -1;text-align: center;animation-name: anim3;animation-duration: 0.5s;animation-play-state: paused;" id="ot1">Happy Birthday Mother</p>    <p style="position: absolute;left: 50%;top:70px; transform: translate(-50%, -50%);font-size: 40px;font-weight: 900;z-index: -1;text-align: center;background:linear-gradient(to right,rgb(200, 255, 0),rgb(255, 212, 21));background-clip: text;-webkit-text-fill-color: transparent;animation-name: anim2;animation-duration: 0.5s;animation-delay: 0s;display: none;" id="ot2">Happy Birthday Mother</p>
+    <div class="bg-blur" id="bg-blur1"></div>
+    <img src="edge-decoration-1.png" height="120" id="cd1">
+    <img src="edge-decoration-1.png" height="120" id="cd2">
+    <img src="edge-decoration-1.png" height="120" id="cd3">
+    <img src="edge-decoration-1.png" height="120" id="cd4">
+    <img src="butterfly1.gif" id="bf1" height="100">
+    <br><br><br><br><br><br><br><div class="gift" id="gift1" onclick="clicked()">
+        <img src="gift-box-holiday-accessories-Q95rLQF-600-removebg-preview.png" height="250" class="giftimg">
+    </div>
+    <div class="gt" id="gt1"><p style="text-align: center;color: white;font-size: 30px;font-weight: 900;">Open this gift👆</p></div>
+    <br><br>
+        <div class="rgt" id="rgt1"><p style="text-align: center;color: white;font-size: 30px;font-weight: 900;text-decoration: underline;">You got!!!</p></div>
+    <div class="rg" id="rg1">
+        <div style="width: 50%;display: flex;justify-content: center;"><img src="emvelope.png" height="120" class="imgh" onclick="open1()"></div>
+
+        <div style="width: 50%;display: flex;justify-content: center;"><img src="vi1.png" height="120" class="imgh" onclick="open2()"></div>
+    </div>
+<div class="display_div" id="dd1">
+    <div class="letter" id="letter1">
+        <button style="border: none;background-color: white;border-radius: 10px;margin-bottom: 15px;" class="bt1" onclick="close1()"><img src="close1.svg"></button>
+        <div style="background-color: rgb(233, 239, 140);width: 300px;height: 400px;">
+            <br><div style="margin-left: 5px;"><br><a style="font-style: italic;"><span style="font-weight: 900;">Happy birthday mother,</span><br><br>Hope that you are doing great in life. I am really happy to have a mother a mother like you and today's your birthday. I'm thankful to you for raising me well and I hope I can give you the return. I hope you can always stay with us And once again a very Happy Birthday!!.<br><br>-Ryan</a></div>
+
+        </div>
+        
+    </div>
+    <div class="vc" id="vc1">
+        <div class="vidcam1">
+            <video width="292" height="190" controls style="margin-top: 210px;margin-left:20px;border-radius: 20px;border: 2px solid rgb(52, 51, 51);">
+            <source src="video1.mp4" type="video/mp4">
+            <source src="video1.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+        </div>
+<br><div style="width: 100%;display: flex;justify-content: center;align-items: center;"><p style="font-size: 30px;color: white;text-align: center;">A video for you</p><button style="border: none;background-color: white;border-radius: 20px;margin-bottom: 5px;width: 70px;height: 50px;margin-left: 15px;" class="bt1" onclick="close1()"><img src="close1.svg"></button></div>
+    </div>
+</div>
+<script>
+    function abb1() {
+        document.getElementById("bg-blur1").style.backdropFilter = "blur(7px)";
+        document.getElementById("cd1").style.left = "0px" 
+        document.getElementById("cd1").style.bottom = "0px" 
+        document.getElementById("cd2").style.right = "0px" 
+        document.getElementById("cd2").style.bottom = "0px" 
+        document.getElementById("cd3").style.left = "0px" 
+        document.getElementById("cd3").style.top = "0px" 
+        document.getElementById("cd4").style.right = "0px" 
+        document.getElementById("cd4").style.top = "0px" 
+        setTimeout(startbutterfly,5000)
+        setTimeout(overlap1,1000)
+    }
+    function overlap1() {
+        document.getElementById("ot2").style.display = "block"
+        document.getElementById("ot1").style.animationPlayState = "running"
+        setTimeout(function() {document.getElementById("ot1").style.display = "none"},500)
+    }
+    function startbutterfly() {
+        var dw = window.innerWidth
+        var dh = window.innerHeight
+        document.getElementById("bf1").style.animationPlayState = "running"
+        setTimeout(function() { document.getElementById("bf1").style.animationPlayState = "paused"},10000)
+        setTimeout(startbutterfly,Math.floor(Math.random()*20000)+10000)
+    }
+    function clicked() {
+        document.getElementById("gift1").style.opacity = 0
+        document.getElementById("gt1").style.opacity = 0
+        setTimeout(showgift,500)
+    }
+    function showgift() {
+        document.getElementById("gift1").style.display = "none"
+        document.getElementById("gt1").style.display = "none"
+        document.getElementById("rg1").style.display = "flex"
+        document.getElementById("rgt1").style.display = "block"
+        document.getElementById("rg1").style.opacity = 1
+        document.getElementById("rgt1").style.opacity = 1
+    }
+    function open1() {
+            document.getElementById("dd1").style.display = "flex"
+            document.getElementById("letter1").style.display = "block"
+    }
+    function open2() {
+            document.getElementById("dd1").style.display = "flex"
+            document.getElementById("vc1").style.display = "block"
+    }
+    function close1() {
+            document.getElementById("dd1").style.display = "none"
+            document.getElementById("letter1").style.display = "none"
+            document.getElementById("vc1").style.display = "none"
+    }
+</script>
+</body>
+</html>
